@@ -865,13 +865,12 @@ footer{
   display: flex;
   gap: 18px;
   margin-top: 18px;
-
-  /* 👇 YE IMPORTANT LINE HAI */
   justify-content: center;
-
-  /* 👇 THODA RIGHT SHIFT */
   width: 102%;
 }
+
+
+
 
 
 .social-disabled{
