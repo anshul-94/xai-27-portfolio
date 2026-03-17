@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anshul AI Assistant</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+radial-gradient(circle at 20% 20%, #2563eb22, transparent 40%),
+radial-gradient(circle at 80% 80%, #06b6d422, transparent 40%),
+#020617;
+
+font-family:"Poppins",sans-serif;
+
+}
+
+//////////////////////////////////////////////////
+// CONTAINER
+//////////////////////////////////////////////////
+
+.chat-container{
+
+width:420px;
+height:650px;
+
+background:rgba(15,23,42,0.8);
+
+backdrop-filter:blur(20px);
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 0 40px rgba(37,99,235,0.2);
+
+display:flex;
+flex-direction:column;
+
+overflow:hidden;
+
+}
+
+//////////////////////////////////////////////////
+// HEADER
+//////////////////////////////////////////////////
+
+.header{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+padding:16px;
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+color:white;
+
+}
+
+.avatar{
+
+width:42px;
+height:42px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-weight:bold;
+
+}
+
+.name{
+font-weight:600;
+}
+
+.status{
+
+font-size:12px;
+color:#22c55e;
+
+}
+
+//////////////////////////////////////////////////
+// CHAT BOX
+//////////////////////////////////////////////////
+
+.chat-box{
+
+flex:1;
+
+padding:16px;
+
+overflow-y:auto;
+
+}
+
+.chat-box::-webkit-scrollbar{
+width:4px;
+}
+
+.chat-box::-webkit-scrollbar-thumb{
+background:#2563eb;
+}
+
+//////////////////////////////////////////////////
+// MESSAGE
+//////////////////////////////////////////////////
+
+.message{
+
+padding:12px;
+
+margin-bottom:10px;
+
+border-radius:12px;
+
+max-width:80%;
+
+color:white;
+
+font-size:14px;
+
+}
+
+.user{
+
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+margin-left:auto;
+
+}
+
+.bot{
+
+background:#1e293b;
+
+}
+
+//////////////////////////////////////////////////
+// INPUT
+//////////////////////////////////////////////////
+
+.input-area{
+
+display:flex;
+
+padding:10px;
+
+border-top:1px solid rgba(255,255,255,0.08);
+
+}
+
+input{
+
+flex:1;
+
+background:transparent;
+
+border:none;
+
+outline:none;
+
+color:white;
+
+padding:10px;
+
+}
+
+button{
+
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+border:none;
+
+color:white;
+
+padding:10px 16px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="chat-container">
+
+<div class="header">
+
+<div class="avatar">
+A
+</div>
+
+<div>
+
+<div class="name">
+Anshul AI Assistant
+</div>
+
+<div class="status">
+● Online
+</div>
+
+</div>
+
+</div>
+
+<div id="chat-box" class="chat-box">
+
+<div class="message bot">
+Hello Anshul 👋<br>
+I'm your personal AI assistant.<br>
+Ask anything about your portfolio or AI projects.
+</div>
+
+</div>
+
+<div class="input-area">
+
+<input id="input"
+placeholder="Ask about my skills, projects, AI..." />
+
+<button onclick="sendMessage()">
+Send
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+const input=document.getElementById("input");
+
+input.addEventListener("keypress",(e)=>{
+
+if(e.key==="Enter"){
+
+sendMessage();
+
+}
+
+});
+
+//////////////////////////////////////////////////
+// SEND MESSAGE
+//////////////////////////////////////////////////
+
+async function sendMessage(){
+
+const text=input.value;
+
+if(!text) return;
+
+addMessage(text,"user");
+
+input.value="";
+
+addMessage("Thinking...","bot","typing");
+
+const res=await fetch("http://localhost:3000/chat",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+message:text
+})
+
+});
+
+const data=await res.json();
+
+removeTyping();
+
+addMessage(data.reply,"bot");
+
+}
+
+//////////////////////////////////////////////////
+// ADD MESSAGE
+//////////////////////////////////////////////////
+
+function addMessage(text,type,id){
+
+const box=document.getElementById("chat-box");
+
+const div=document.createElement("div");
+
+div.className="message "+type;
+
+if(id) div.id=id;
+
+div.innerHTML=text;
+
+box.appendChild(div);
+
+box.scrollTop=box.scrollHeight;
+
+}
+
+//////////////////////////////////////////////////
+// REMOVE TYPING
+//////////////////////////////////////////////////
+
+function removeTyping(){
+
+const typing=document.getElementById("typing");
+
+if(typing) typing.remove();
+
+}
+
+</script>
+
+</body>
+</html>
