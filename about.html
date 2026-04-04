@@ -19,7 +19,7 @@
   
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
+    <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
   </nav>
 </header>
@@ -193,5 +193,17 @@
 
 
 
+  <script>
+    const links = document.querySelectorAll("nav a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  </script>
 </body>
 </html>

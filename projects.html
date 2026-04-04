@@ -1,121 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<link rel="stylesheet" href="pro.css">
-<title>Projects | Anshul Patidar</title>
+  <link rel="stylesheet" href="pro.css">
+  <title>Projects | Anshul Patidar</title>
+  <style>
+    .github-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #aaa;
+      padding: 10px 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+    }
+    .github-btn:hover {
+      color: #00f5a0;
+      border-color: #00f5a0;
+      box-shadow: 0 8px 20px rgba(0, 245, 160, 0.3);
+      transform: translateY(-2px);
+    }
+    .project-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">Xai '27</div>
-  
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
-    <a href="projects.html">Projects</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo">Xai '27</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
 
 
 
-<section class="projects-section">
+  <section class="projects-section">
 
-  <!-- ===== CURRENT PROJECTS ===== -->
-  <h2 class="section-title">Current Projects</h2>
+    <!-- ===== CURRENT PROJECTS ===== -->
+    <h2 class="section-title">Current Projects</h2>
 
-  <div class="projects-grid">
+    <div class="projects-grid">
 
-    <!-- EPS PROJECT -->
-    <div class="project-card" id="epsCard">
-      <h3>EPS School Management System</h3>
-      <p>
-        Full-stack school platform with Admin Panel, Student Dashboard,
-        AI Chatbot & Result Prediction Model.
-      </p>
-      <div class="tech-stack">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Python</span>
-        <span>Machine Learning</span>
+      <!-- SWIGGY PROJECT -->
+      <div class="project-card">
+        <h3>Swiggy Delivery Time Prediction</h3>
+        <p>
+          Built a machine learning system to predict delivery time accurately using real-world data and regression models. Optimized logistics for improved user experience.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>NumPy</span>
+          <span>Scikit-learn</span>
+        </div>
+        <div class="project-btns">
+          <button class="view-btn" onclick="openModal('swiggyModal')">View Details</button>
+          <button class="github-btn" onclick="window.open('#', '_blank')">View on GitHub →</button>
+        </div>
       </div>
-      <button class="view-btn">View Details</button>
+
+      <!-- AI AGENT MOBILE FINDER -->
+      <div class="project-card">
+        <h3>AI Agent Mobile Finder</h3>
+        <p>
+          Built an intelligent AI agent that recommends mobile phones based on user preferences such as budget, features, and brand. The system uses an agentic workflow combined with real-time web search to deliver accurate and up-to-date recommendations.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>LangChain</span>
+          <span>LangGraph</span>
+          <span>Tavily API</span>
+          <span>LLM</span>
+          <span>APIs</span>
+        </div>
+        <div class="project-btns">
+          <button class="view-btn" onclick="openModal('mobileModal')">View Details</button>
+          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/Smartphone-Selector', '_blank')">View on GitHub →</button>
+        </div>
+      </div>
+
+      <!-- RAG CHATBOT -->
+      <div class="project-card">
+        <h3>AI Website Chatbot (RAG System)</h3>
+        <p>
+          Developed an advanced Retrieval-Augmented Generation (RAG) chatbot that retrieves and answers user queries using real-time knowledge from GeeksforGeeks documentation. The system processes unstructured web data and generates accurate, context-aware responses for Python-related queries.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>LangChain</span>
+          <span>FAISS</span>
+          <span>Embeddings</span>
+          <span>Web Scraping</span>
+          <span>OpenRouter (LLM)</span>
+        </div>
+        <div class="project-btns">
+          <button class="view-btn" onclick="openModal('ragModal')">View Details</button>
+          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/DocuMindAI', '_blank')">View on GitHub →</button>
+        </div>
+      </div>
+
+      <!-- YOUTUBE VIDEO ANALYZER -->
+      <div class="project-card">
+        <h3>YouTube Video Analyzer (AI + RAG System)</h3>
+        <p>
+          An advanced AI system that analyzes YouTube videos using transcript-based retrieval and generates structured insights like summary, key points, and topic identification.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>TF-IDF (sklearn)</span>
+          <span>YouTube API</span>
+          <span>OpenRouter / Groq</span>
+          <span>RAG</span>
+        </div>
+        <div class="project-btns">
+          <button class="view-btn" onclick="openModal('youtubeModal')">View Details</button>
+          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/youtube_video_anaylze', '_blank')">View on GitHub →</button>
+        </div>
+      </div>
+
+      <!-- VOICE ASSISTANT -->
+      <div class="project-card">
+        <h3>AI Voice Assistant (Kids Learning)</h3>
+        <p>
+          Developed a voice-enabled AI assistant designed for children (Class 1–5) to help them learn basic concepts like alphabets, tables, and general knowledge through interactive voice-based communication.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Whisper (STT)</span>
+          <span>edge-tts</span>
+          <span>OpenRouter (LLM)</span>
+          <span>SpeechRecognition</span>
+        </div>
+        <div class="project-btns">
+          <button class="view-btn" onclick="openModal('voiceModal')">View Details</button>
+          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/Ai-assiant', '_blank')">View on GitHub →</button>
+        </div>
+      </div>
+
     </div>
 
-    <!-- SWIGGY PROJECT -->
-    <div class="project-card">
-      <h3>Swiggy Delivery Time Prediction</h3>
-      <p>
-        Regression-based ML model predicting real-time delivery duration
-        using historical order data.
-      </p>
-      <div class="tech-stack">
-        <span>Python</span>
-        <span>NumPy</span>
-        <span>Pandas</span>
-        <span>Regression</span>
+    <!-- ===== UPCOMING PROJECTS ===== -->
+    <h2 class="section-title upcoming-title">Upcoming Projects</h2>
+
+    <div class="upcoming-container">
+      <div class="project-card upcoming">
+        <span class="badge">Coming Soon</span>
+        <h3>Memory-Based AI Chatbot</h3>
+        <p>
+          An advanced conversational AI system utilizing multi-session memory logic to deliver professional-grade,
+          context-aware interactions.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>OpenRouter (LLM)</span>
+          <span>LangChain</span>
+          <span>PostgreSQL</span>
+        </div>
       </div>
     </div>
 
-  </div>
+  </section>
 
-  <!-- ===== UPCOMING PROJECTS ===== -->
-  <h2 class="section-title upcoming-title">Upcoming Projects</h2>
+  <!-- ===== MODALS ===== -->
 
-  <div class="projects-grid">
+  <!-- SWIGGY MODAL -->
+  <div id="swiggyModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Swiggy Delivery Time Prediction</h2>
+      <p>Built a machine learning system to predict delivery time accurately using real-world data, aimed at optimizing logistics and improving user experience.</p>
 
-    <div class="project-card upcoming">
-      <h3>AI Chatbot System</h3>
-      <p>
-        NLP-powered chatbot designed to handle automated
-        school-related queries with intelligent response handling.
-      </p>
+      <h3>Key Features</h3>
+      <ul>
+        <li>Implement <strong>Random Forest</strong> and <strong>Linear Regression</strong> models for high-precision time estimation.</li>
+        <li>Perform extensive data cleaning and preprocessing on a dataset of <strong>10,000+ records</strong>.</li>
+        <li>Apply <strong>Feature Engineering</strong> techniques to optimize model inputs and predictive power.</li>
+        <li>Conduct in-depth <strong>Exploratory Data Analysis (EDA)</strong> to identify delivery bottlenecks.</li>
+        <li>Achieve a robust model performance with an accuracy of approximately <strong>90%</strong>.</li>
+      </ul>
+
+      <h3>Tech Stack</h3>
       <div class="tech-stack">
-        <span>Python</span>
-        <span>NLP</span>
-        <span>ML</span>
+        <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span>
       </div>
-      <span class="badge">Coming Soon</span>
     </div>
-
   </div>
 
-</section>
+  <!-- MOBILE FINDER MODAL -->
+  <div id="mobileModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>AI Agent Mobile Finder</h2>
+      <p>An intelligent AI agent designed to act as a personal advisor, recommending mobile phones based on complex user preferences using reasoning loops.</p>
 
-<!-- ===== MODAL ===== -->
-<div id="epsModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>Thought → Action → Observation:</strong> Implements a sophisticated reasoning workflow for dynamic problem solving.</li>
+        <li><strong>Real-time Search:</strong> Integrated <strong>Tavily API</strong> for live web search and up-to-date product data retrieval.</li>
+        <li><strong>Dynamic Tool-Calling:</strong> Built a robust system for filtering, selecting, and recommending the best options.</li>
+        <li><strong>Multi-step Reasoning:</strong> Maintains internal state and logic chains for superior decision-making quality.</li>
+        <li><strong>Personalized Interaction:</strong> A conversational interface that adapts to individual user needs and brand preferences.</li>
+      </ul>
 
-    <h2>EPS School Management System</h2>
-
-    <p>
-      A complete digital platform built to manage academic and administrative
-      operations efficiently with automation and intelligent prediction.
-    </p>
-
-    <h3>Key Modules</h3>
-    <ul>
-      <li>Dynamic School Website</li>
-      <li>Student Authentication System</li>
-      <li>Admin Management Dashboard</li>
-      <li>AI Chatbot Integration</li>
-      <li>Result Prediction ML Model</li>
-    </ul>
-
-    <h3>Machine Learning Implementation</h3>
-    <p>
-      Supervised classification model predicting PASS/FAIL based on attendance,
-      study hours, previous performance and academic class level.
-      Optimized for accuracy and performance evaluation.
-    </p>
-
+      <h3>Tech Stack</h3>
+      <div class="tech-stack">
+        <span>Python</span><span>LangChain</span><span>LangGraph</span><span>Tavily API</span><span>LLM</span><span>APIs</span>
+      </div>
+    </div>
   </div>
-</div>
+
+  <!-- RAG MODAL -->
+  <div id="ragModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>AI Website Chatbot (RAG System)</h2>
+      <p>Developed an advanced Retrieval-Augmented Generation (RAG) chatbot that retrieves and answers user queries using real-time knowledge from GeeksforGeeks documentation.</p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>Data Processing:</strong> Scraped and processed GeeksforGeeks documentation for comprehensive Python concepts.</li>
+        <li><strong>Semantic Search:</strong> Implemented advanced embeddings for high-relevance retrieval during user queries.</li>
+        <li><strong>Vector Database:</strong> Leveraged <strong>FAISS</strong> for efficient document indexing and high-speed lookups.</li>
+        <li><strong>Optimized Chunking:</strong> Designed a custom chunking strategy to preserve semantic context across documents.</li>
+        <li><strong>End-to-End Pipeline:</strong> Built a complete retrieval-generation workflow for accurate, context-aware answers.</li>
+        <li><strong>LLM Generation:</strong> Integrated <strong>OpenRouter (LLM)</strong> to synthesize retrieved data into natural responses.</li>
+      </ul>
+
+      <h3>Tech Stack</h3>
+      <div class="tech-stack">
+        <span>Python</span><span>LangChain</span><span>FAISS</span><span>Embeddings</span><span>Web Scraping</span><span>OpenRouter (LLM)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- YOUTUBE ANALYZER MODAL -->
+  <div id="youtubeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>YouTube Video Analyzer (AI + RAG System)</h2>
+      <p>An advanced AI system that analyzes YouTube videos using transcript-based retrieval and generates structured insights and learning outcomes.</p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>Transcript Extraction:</strong> Automatic retrieval of video transcripts using specialized APIs.</li>
+        <li><strong>Smart Chunking:</strong> Innovative TF-IDF based retrieval logic for navigating long-form video content.</li>
+        <li><strong>Context-Aware Q&A:</strong> An intelligent RAG pipeline that answers specific user questions using video context.</li>
+        <li><strong>Structured Summarization:</strong> Generates automated summaries, topic lists, and key learning points.</li>
+        <li><strong>Real-time Chat:</strong> Interactive interface for deep-diving into video content through conversation.</li>
+      </ul>
+
+      <h3>Tech Stack</h3>
+      <div class="tech-stack">
+        <span>Python</span><span>FastAPI</span><span>TF-IDF (sklearn)</span><span>YouTube Transcript API</span><span>OpenRouter / Groq</span><span>RAG</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOICE MODAL -->
+  <div id="voiceModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>AI Voice Assistant (Kids Learning)</h2>
+      <p>A specialized voice assistant designed to help children (Class 1–5) learn basic educational concepts in a fun and interactive way.</p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>Speech-to-Text:</strong> Integrated <strong>Whisper (STT)</strong> for highly accurate child voice recognition.</li>
+        <li><strong>Text-to-Speech:</strong> Leverages <strong>edge-tts</strong> for natural, human-like voice synthesis that is clear for kids.</li>
+        <li><strong>Real-time Interaction:</strong> Engineered for a seamless and responsive learning experience with low latency.</li>
+        <li><strong>Intelligent Q&A:</strong> Integrated <strong>OpenRouter (LLM)</strong> to answer kids' curious questions about ABCD, tables, and GK.</li>
+        <li><strong>System Flow:</strong> Voice Input &rarr; Whisper (STT) &rarr; OpenRouter (LLM) &rarr; edge-tts (TTS) &rarr; Voice Output</li>
+      </ul>
+
+      <h3>Tech Stack</h3>
+      <div class="tech-stack">
+        <span>Python</span><span>Whisper (STT)</span><span>edge-tts</span><span>OpenRouter (LLM)</span><span>SpeechRecognition</span>
+      </div>
+    </div>
+  </div>
 
 <footer class="footer">
   <div class="footer-container">
@@ -164,29 +348,59 @@
 </footer>
 
 
-<script>
-const epsCard = document.getElementById("epsCard");
-const modal = document.getElementById("epsModal");
-const closeBtn = document.querySelector(".close");
+  <script>
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+    }
 
-epsCard.onclick = function(){
-  modal.style.display = "flex";
-}
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
 
-closeBtn.onclick = function(){
-  modal.style.display = "none";
-}
+    // Close buttons logic
+    document.querySelectorAll('.close').forEach(btn => {
+      btn.onclick = function () {
+        const modal = btn.closest('.modal');
+        if (modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      }
+    });
 
-window.onclick = function(event){
-  if(event.target == modal){
-    modal.style.display = "none";
-  }
-}
-</script>
+    // Close when clicking outside of modal content
+    window.onclick = function (event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+  </script>
 
 
 
 
 
+  <script>
+    const links = document.querySelectorAll("nav a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  </script>
 </body>
+
 </html>

@@ -25,8 +25,9 @@ header {
   top: 0;
   backdrop-filter: blur(12px);
   background: rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
+  width: 100%;
 }
 
 .logo {
@@ -34,7 +35,13 @@ header {
   font-weight: 700;
   background: linear-gradient(45deg, #00f5a0, #00d9f5);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -61,7 +68,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-nav a:hover {
+nav a:hover, nav a.active {
   color: #00f5a0;
 }
 
@@ -192,71 +199,6 @@ nav a:hover {
   color: #00d9f5;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 25px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  color: #aaa;
-  font-size: 14px;
-}
-
-/* ===== ANIMATION ===== */
-.timeline-item,
-.skill-card,
-.intro,
-.future {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1s ease forwards;
-}
-
-/* .timeline-item:nth-child(1) { animation-delay: 0.2s; }
-.timeline-item:nth-child(2) { animation-delay: 0.4s; }
-.timeline-item:nth-child(3) { animation-delay: 0.6s; }
-.timeline-item:nth-child(4) { animation-delay: 0.8s; }
-.timeline-item:nth-child(5) { animation-delay: 1s; } */
-
-.timeline-item {
-  margin-bottom: 50px;
-  position: relative;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
-}
-.timeline-item {
-  margin-bottom: 50px;
-  position: relative;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: calc(var(--i) * 0.2s);
-}
-
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width: 768px){
-  .hero h1{
-    font-size: 36px;
-  }
-
-  header{
-    padding: 15px 5%;
-  }
-
-  nav a{
-    margin-left: 15px;
-  }
-}
-
-
 /* ===== CLEAN MODERN FOOTER ===== */
 
 .footer{
@@ -313,8 +255,6 @@ footer {
   color:#777;
 }
 
-
-
 /* Responsive */
 @media(max-width:768px){
 
@@ -351,7 +291,6 @@ footer {
   color:#00f5a0;
   transform:translateY(-4px);
 }
-/* ===== SOCIAL ICONS ===== */
 
 .social-icons{
   margin-top:18px;
@@ -380,8 +319,6 @@ footer {
   box-shadow:0 0 15px rgba(0,245,160,0.4);
 }
 
-
-
 .footer-brand {
   position: relative;
 }
@@ -395,14 +332,9 @@ footer {
   display: flex;
   gap: 18px;
   margin-top: 18px;
-
-  /* 👇 YE IMPORTANT LINE HAI */
   justify-content: center;
-
-  /* 👇 THODA RIGHT SHIFT */
   width: 102%;
 }
-
 
 .social-disabled{
   width:38px;
@@ -416,7 +348,7 @@ footer {
   font-size:16px;
   border:1px solid rgba(255,255,255,0.1);
   transition:0.3s ease;
-  cursor:pointer;   /* hover feel rahe */
+  cursor:pointer;
 }
 
 .social-disabled:hover{
@@ -426,6 +358,93 @@ footer {
   box-shadow:0 0 15px rgba(0,245,160,0.4);
 }
 
+/* RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 5% 40px;
+  }
+  
+  .footer-right {
+    padding-top: 0;
+  }
+}
+
+/* ===== ANIMATION ===== */
+.timeline-item,
+.skill-card,
+.intro,
+.future {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) { animation-delay: 0.4s; }
+.timeline-item:nth-child(3) { animation-delay: 0.6s; }
+.timeline-item:nth-child(4) { animation-delay: 0.8s; }
+.timeline-item:nth-child(5) { animation-delay: 1s; } */
+
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
 
 
 
+
+
+
+
+.footer-brand h3 {
+  text-align: center;
+  width: 100%;
+}

@@ -17,7 +17,7 @@
   
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
+    <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
   </nav>
 </header>
@@ -201,20 +201,30 @@
   <div class="footer-bottom">
     © 2026 Xai '27 • Built with passion for AI
   </div>
-
+</footer>
 
 <a href="#" class="ai-button" onclick="openAI()">
   <i class="fas fa-robot"></i>
-<span>AI Assistant</span>
+  <span>AI Assistant</span>
 </a> 
-<script> function openAI(){
-    window.location.href = "loading.html";
 
+<script> 
+function openAI(){
+    window.location.href = "loading.html";
 } 
 </script>
 
+  <script>
+    const links = document.querySelectorAll("nav a");
+    const currentPage = window.location.pathname.split("/").pop();
 
-</footer>
-
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  </script>
 </body>
 </html>
