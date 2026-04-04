@@ -169,19 +169,30 @@ nav a:hover, nav a.active {
 }
 
 .skill-card {
-  background: rgba(255,255,255,0.05);
-  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  border-radius: 15px;
-  transition: 0.4s;
-  backdrop-filter: blur(12px);
+
+  min-height: 90px;
+  padding: 18px;
+
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+
   border: 1px solid rgba(255,255,255,0.08);
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+
+  transition: all 0.3s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(0,245,160,0.5);
-  border-color: #00f5a0;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 230, 168, 0.2);
 }
 
 /* ===== FUTURE ===== */
@@ -447,4 +458,31 @@ nav a:hover, nav a.active {
 .footer-brand h3 {
   text-align: center;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .skill-card {
+    min-height: 80px;
+    font-size: 14px;
+    padding: 14px;
+  }
 }

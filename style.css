@@ -112,34 +112,88 @@ nav a:hover, nav a.active {
   max-width:550px;
 }
 
-.hero-buttons{
-  margin-top:25px;
-  display:flex;
-  gap:15px;
-  flex-wrap:wrap;
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.btn{
-  padding:10px 22px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  font-size:14px;
-  transition:0.3s;
+.top-btn,
+.bottom-btns {
+  display: contents;
 }
 
-.primary{
-  background:linear-gradient(45deg,#00f5a0,#00d9f5);
-  color:#000;
+@media (max-width: 768px) {
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* View Projects full width */
+  .top-btn a {
+    grid-column: span 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Other two buttons */
+  .bottom-btns a {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-.secondary{
-  border:1px solid #00f5a0;
-  color:#00f5a0;
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s ease;
+  display: inline-block;
 }
 
-.btn:hover{
-  transform:translateY(-4px);
+/* Reduce brightness (more professional) */
+.btn.primary {
+  background: linear-gradient(135deg, #00cfa2, #00a8cc);
+  color: #000;
+}
+
+.btn.primary:hover {
+  box-shadow: 0 0 15px rgba(0, 200, 160, 0.3);
+  transform: translateY(-4px);
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #00f5a0;
+  color: #00f5a0;
+}
+
+.btn.secondary:hover {
+  transform: translateY(-4px);
+}
+
+.hire-btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s ease;
+  display: inline-block;
+  background: #0f172a;
+  color: #fff;
+  border: 1px solid #00f5a0;
+  box-shadow: inset 0 2px 8px rgba(0, 245, 160, 0.4);
+}
+
+.hire-btn:hover {
+  background: #00f5a0;
+  color: #000;
+  transform: translateY(-4px);
 }
 
 /* ===== HERO IMAGE ===== */
@@ -1266,4 +1320,41 @@ display:none;
 .footer-brand h3 {
   text-align: center;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .skills-preview {
+    text-align: center;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .skill-card h3 {
+    text-align: center;
+  }
+
+  .skill-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .skill-details span {
+    text-align: center;
+  }
+
 }
