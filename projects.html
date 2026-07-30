@@ -61,95 +61,66 @@
 
     <div class="projects-grid">
 
-      <!-- SWIGGY PROJECT -->
+      <!-- CAREERPILOT AI -->
       <div class="project-card">
-        <h3>Swiggy Delivery Time Prediction</h3>
+        <span class="badge">Featured</span>
+        <h3>CareerPilot AI</h3>
         <p>
-          Built a machine learning system to predict delivery time accurately using real-world data and regression models. Optimized logistics for improved user experience.
+          CareerPilot AI is an Agentic AI-powered career intelligence platform that helps students improve their resumes, discover jobs, prepare for interviews, and receive personalized career guidance using multiple AI modules.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>SQLite</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>LangChain</span>
+          <span>Ollama</span>
+          <span>Tavily API</span>
+          <span>RAG</span>
+        </div>
+        <div class="project-btns">
+          <button class="view-btn" onclick="openModal('careerPilotModal')">View Details</button>
+          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/CareerPilotAI-', '_blank')">View on GitHub →</button>
+        </div>
+      </div>
+
+      <!-- FOOD DELIVERY TIME PREDICTION -->
+      <div class="project-card">
+        <h3>Food Delivery Time Prediction</h3>
+        <p>
+          Built an end-to-end Machine Learning regression model that predicts food delivery time using real-world delivery data. The project includes preprocessing, feature engineering, model training, and evaluation.
         </p>
         <div class="tech-stack">
           <span>Python</span>
           <span>Pandas</span>
           <span>NumPy</span>
           <span>Scikit-learn</span>
+          <span>Matplotlib</span>
+          <span>Seaborn</span>
+          <span>Joblib</span>
         </div>
         <div class="project-btns">
           <button class="view-btn" onclick="openModal('swiggyModal')">View Details</button>
+          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/Food-Delivery-Time-Prediction', '_blank')">View on GitHub →</button>
         </div>
       </div>
 
-      <!-- AI AGENT MOBILE FINDER -->
+      <!-- AI LEARNING ASSISTANT -->
       <div class="project-card">
-        <h3>AI Agent Mobile Finder</h3>
+        <h3>AI Learning Assistant (Voice + RAG)</h3>
         <p>
-          Built an intelligent AI agent that recommends mobile phones based on user preferences such as budget, features, and brand. The system uses an agentic workflow combined with real-time web search to deliver accurate and up-to-date recommendations.
-        </p>
-        <div class="tech-stack">
-          <span>Python</span>
-          <span>LangChain</span>
-          <span>LangGraph</span>
-          <span>Tavily API</span>
-          <span>LLM</span>
-          <span>APIs</span>
-        </div>
-        <div class="project-btns">
-          <button class="view-btn" onclick="openModal('mobileModal')">View Details</button>
-          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/Smartphone-Selector', '_blank')">View on GitHub →</button>
-        </div>
-      </div>
-
-      <!-- RAG CHATBOT -->
-      <div class="project-card">
-        <h3>AI Website Chatbot (RAG System)</h3>
-        <p>
-          Developed an advanced Retrieval-Augmented Generation (RAG) chatbot that retrieves and answers user queries using real-time knowledge from GeeksforGeeks documentation. The system processes unstructured web data and generates accurate, context-aware responses for Python-related queries.
+          Developed an AI-powered learning assistant that lets students upload PDFs and notes, ask questions through voice or text, and receive context-aware answers using Retrieval-Augmented Generation (RAG).
         </p>
         <div class="tech-stack">
           <span>Python</span>
           <span>LangChain</span>
           <span>FAISS</span>
-          <span>Embeddings</span>
-          <span>Web Scraping</span>
-          <span>OpenRouter (LLM)</span>
-        </div>
-        <div class="project-btns">
-          <button class="view-btn" onclick="openModal('ragModal')">View Details</button>
-          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/DocuMindAI', '_blank')">View on GitHub →</button>
-        </div>
-      </div>
-
-      <!-- YOUTUBE VIDEO ANALYZER -->
-      <div class="project-card">
-        <h3>YouTube Video Analyzer (AI + RAG System)</h3>
-        <p>
-          An advanced AI system that analyzes YouTube videos using transcript-based retrieval and generates structured insights like summary, key points, and topic identification.
-        </p>
-        <div class="tech-stack">
-          <span>Python</span>
-          <span>FastAPI</span>
-          <span>TF-IDF (sklearn)</span>
-          <span>YouTube API</span>
-          <span>OpenRouter / Groq</span>
-          <span>RAG</span>
-        </div>
-        <div class="project-btns">
-          <button class="view-btn" onclick="openModal('youtubeModal')">View Details</button>
-          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/youtube_video_anaylze', '_blank')">View on GitHub →</button>
-        </div>
-      </div>
-
-      <!-- VOICE ASSISTANT -->
-      <div class="project-card">
-        <h3>AI Voice Assistant (Kids Learning)</h3>
-        <p>
-          Developed a voice-enabled AI assistant designed for children (Class 1–5) to help them learn basic concepts like alphabets, tables, and general knowledge through interactive voice-based communication.
-        </p>
-        <div class="tech-stack">
-          <span>Python</span>
-          <span>Whisper (STT)</span>
+          <span>Whisper</span>
           <span>edge-tts</span>
-          <span>OpenRouter (LLM)</span>
-          <span>SpeechRecognition</span>
+          <span>HuggingFace Embeddings</span>
+          <span>Ollama</span>
         </div>
         <div class="project-btns">
           <button class="view-btn" onclick="openModal('voiceModal')">View Details</button>
@@ -157,145 +128,235 @@
         </div>
       </div>
 
-    </div>
-
-    <!-- ===== UPCOMING PROJECTS ===== -->
-    <h2 class="section-title upcoming-title">Upcoming Projects</h2>
-
-    <div class="upcoming-container">
-      <div class="project-card upcoming">
-        <span class="badge">Coming Soon</span>
-        <h3>Memory-Based AI Chatbot</h3>
+      <!-- AI AGENT MOBILE FINDER -->
+      <div class="project-card">
+        <h3>AI Agent Mobile Finder</h3>
         <p>
-          An advanced conversational AI system utilizing multi-session memory logic to deliver professional-grade,
-          context-aware interactions.
+          Built an Agentic AI application that recommends the best smartphones based on user preferences such as budget, camera, gaming, battery, and brand using reasoning and real-time web search.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>LangChain</span>
+          <span>LangGraph</span>
+          <span>Tavily API</span>
+          <span>LLM</span>
+        </div>
+        <div class="project-btns">
+          <button class="view-btn" onclick="openModal('mobileModal')">View Details</button>
+          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/Smartphone-Selector', '_blank')">View on GitHub →</button>
+        </div>
+      </div>
+
+      <!-- YOUTUBE VIDEO ANALYZER -->
+      <div class="project-card">
+        <h3>YouTube Video Analyzer</h3>
+        <p>
+          Developed an AI application that extracts YouTube transcripts, generates summaries, identifies key topics, and answers user questions using Retrieval-Augmented Generation.
         </p>
         <div class="tech-stack">
           <span>Python</span>
           <span>FastAPI</span>
-          <span>OpenRouter (LLM)</span>
-          <span>LangChain</span>
-          <span>PostgreSQL</span>
+          <span>YouTube Transcript API</span>
+          <span>TF-IDF</span>
+          <span>RAG</span>
+          <span>Ollama</span>
+        </div>
+        <div class="project-btns">
+          <button class="view-btn" onclick="openModal('youtubeModal')">View Details</button>
+          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/youtube_video_anaylze', '_blank')">View on GitHub →</button>
         </div>
       </div>
+
+      <!-- AI WEBSITE CHATBOT (RAG) -->
+      <div class="project-card">
+        <h3>AI Website Chatbot (RAG)</h3>
+        <p>
+          Built a Retrieval-Augmented Generation chatbot that answers Python programming questions by retrieving relevant information from technical documentation.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>LangChain</span>
+          <span>FAISS</span>
+          <span>HuggingFace Embeddings</span>
+          <span>Web Scraping</span>
+          <span>Ollama</span>
+        </div>
+        <div class="project-btns">
+          <button class="view-btn" onclick="openModal('ragModal')">View Details</button>
+          <button class="github-btn" onclick="window.open('https://github.com/anshul-94/DocuMindAI', '_blank')">View on GitHub →</button>
+        </div>
+      </div>
+
     </div>
 
   </section>
 
   <!-- ===== MODALS ===== -->
 
-  <!-- SWIGGY MODAL -->
-  <div id="swiggyModal" class="modal">
+  <!-- CAREERPILOT AI MODAL -->
+  <div id="careerPilotModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>Swiggy Delivery Time Prediction</h2>
-      <p>Built a machine learning system to predict delivery time accurately using real-world data, aimed at optimizing logistics and improving user experience.</p>
+      <h2>CareerPilot AI</h2>
+      <p>CareerPilot AI is an Agentic AI-powered career intelligence platform that helps students improve their resumes, discover jobs, prepare for interviews, and receive personalized career guidance using multiple AI modules.</p>
 
-      <h3>Key Features</h3>
+      <h3>Problem Statement</h3>
+      <p>Students and job seekers often struggle to align their resumes with industry expectations, identify their skill gaps, prepare for behavioral/technical interviews, and navigate the complex job market. CareerPilot AI solves this by acting as an end-to-end intelligent career mentor.</p>
+
+      <h3>Features</h3>
       <ul>
-        <li>Implement <strong>Random Forest</strong> and <strong>Linear Regression</strong> models for high-precision time estimation.</li>
-        <li>Perform extensive data cleaning and preprocessing on a dataset of <strong>10,000+ records</strong>.</li>
-        <li>Apply <strong>Feature Engineering</strong> techniques to optimize model inputs and predictive power.</li>
-        <li>Conduct in-depth <strong>Exploratory Data Analysis (EDA)</strong> to identify delivery bottlenecks.</li>
-        <li>Achieve a robust model performance with an accuracy of approximately <strong>90%</strong>.</li>
+        <li><strong>AI Resume Analyzer:</strong> Automated feedback and scoring to optimize resumes against job descriptions.</li>
+        <li><strong>Resume Builder:</strong> Step-by-step guidance for building industry-standard professional resumes.</li>
+        <li><strong>Career Assessment:</strong> In-depth evaluation of skills and interests to map out potential career paths.</li>
+        <li><strong>AI Career Coach:</strong> 24/7 conversational agent providing personalized mentorship and guidance.</li>
+        <li><strong>AI Job Finder:</strong> Smart job search matching candidates with the most relevant opportunities.</li>
+        <li><strong>Skill Gap Analysis:</strong> Actionable insights pointing out missing skills and resources to acquire them.</li>
+        <li><strong>Resume Version History:</strong> Version tracking to save, manage, and iterate on different resume drafts.</li>
       </ul>
+
+      <h3>Workflow</h3>
+      <p>Resume &rarr; AI Analysis &rarr; Career Suggestions &rarr; Job Search &rarr; Personalized Recommendations</p>
 
       <h3>Tech Stack</h3>
       <div class="tech-stack">
-        <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span>
+        <span>Python</span><span>Flask</span><span>SQLite</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>LangChain</span><span>Ollama</span><span>Tavily API</span><span>RAG</span>
       </div>
     </div>
   </div>
 
-  <!-- MOBILE FINDER MODAL -->
+  <!-- FOOD DELIVERY TIME PREDICTION MODAL -->
+  <div id="swiggyModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Food Delivery Time Prediction</h2>
+      <p>Built an end-to-end Machine Learning regression model that predicts food delivery time using real-world delivery data. The project includes preprocessing, feature engineering, model training, and evaluation.</p>
+
+      <h3>Features</h3>
+      <ul>
+        <li><strong>Processed 45,000+ records:</strong> Real-world delivery data handled for high prediction reliability.</li>
+        <li><strong>Data Cleaning:</strong> Handled missing values, outliers, and incorrect data types.</li>
+        <li><strong>Feature Engineering:</strong> Extracted time and distance metrics to boost predictive power.</li>
+        <li><strong>ColumnTransformer Pipeline:</strong> Built robust pipelines for preprocessing categorical and numerical features.</li>
+        <li><strong>Random Forest Regressor:</strong> Trained and optimized machine learning models for accurate forecasting.</li>
+        <li><strong>Model Evaluation:</strong> Evaluated using metrics like MAE, MSE, and R-squared to ensure precision.</li>
+        <li><strong>Joblib Model Saving:</strong> Serialized the trained model pipeline for seamless deployment and reuse.</li>
+      </ul>
+
+      <h3>Workflow</h3>
+      <p>Dataset &rarr; Preprocessing &rarr; Feature Engineering &rarr; Model Training &rarr; Prediction</p>
+
+      <h3>Tech Stack</h3>
+      <div class="tech-stack">
+        <span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Matplotlib</span><span>Seaborn</span><span>Joblib</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI LEARNING ASSISTANT MODAL -->
+  <div id="voiceModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>AI Learning Assistant (Voice + RAG)</h2>
+      <p>Developed an AI-powered learning assistant that lets students upload PDFs and notes, ask questions through voice or text, and receive context-aware answers using Retrieval-Augmented Generation (RAG).</p>
+
+      <h3>Features</h3>
+      <ul>
+        <li><strong>PDF Upload:</strong> Easily upload textbooks, notes, and documents for learning.</li>
+        <li><strong>Voice Input:</strong> Speak naturally to ask questions using integrated speech-to-text.</li>
+        <li><strong>Voice Output:</strong> Hear answers read aloud with high-quality natural text-to-speech.</li>
+        <li><strong>RAG Pipeline:</strong> Uses Retrieval-Augmented Generation to ground answers in uploaded materials.</li>
+        <li><strong>Semantic Search:</strong> Performs relevant context retrieval based on query meaning.</li>
+        <li><strong>FAISS Vector Database:</strong> Extremely fast indexing and search of document embeddings.</li>
+        <li><strong>Context-aware Answers:</strong> Delivers precise answers sourced from the uploaded documents.</li>
+      </ul>
+
+      <h3>Workflow</h3>
+      <p>Upload PDF &rarr; Create Embeddings &rarr; Store in FAISS &rarr; User Query &rarr; Retrieve Context &rarr; Generate Answer</p>
+
+      <h3>Tech Stack</h3>
+      <div class="tech-stack">
+        <span>Python</span><span>LangChain</span><span>FAISS</span><span>Whisper</span><span>edge-tts</span><span>HuggingFace Embeddings</span><span>Ollama</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI AGENT MOBILE FINDER MODAL -->
   <div id="mobileModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>AI Agent Mobile Finder</h2>
-      <p>An intelligent AI agent designed to act as a personal advisor, recommending mobile phones based on complex user preferences using reasoning loops.</p>
+      <p>Built an Agentic AI application that recommends the best smartphones based on user preferences such as budget, camera, gaming, battery, and brand using reasoning and real-time web search.</p>
 
-      <h3>Key Features</h3>
+      <h3>Features</h3>
       <ul>
-        <li><strong>Thought → Action → Observation:</strong> Implements a sophisticated reasoning workflow for dynamic problem solving.</li>
-        <li><strong>Real-time Search:</strong> Integrated <strong>Tavily API</strong> for live web search and up-to-date product data retrieval.</li>
-        <li><strong>Dynamic Tool-Calling:</strong> Built a robust system for filtering, selecting, and recommending the best options.</li>
-        <li><strong>Multi-step Reasoning:</strong> Maintains internal state and logic chains for superior decision-making quality.</li>
-        <li><strong>Personalized Interaction:</strong> A conversational interface that adapts to individual user needs and brand preferences.</li>
+        <li><strong>Agentic Workflow:</strong> Employs structured loops of thinking and planning to solve search goals.</li>
+        <li><strong>LangGraph State Management:</strong> Directs multi-step LLM states and tool-calling transitions.</li>
+        <li><strong>Tool Calling:</strong> Connects reasoning to external search systems dynamically.</li>
+        <li><strong>Real-time Web Search:</strong> Query live web sources for accurate pricing, availability, and reviews.</li>
+        <li><strong>Multi-step Reasoning:</strong> Solves queries using planning, execution, and comparison cycles.</li>
+        <li><strong>Personalized Recommendations:</strong> Tailors selections according to budget constraints and favorite brands.</li>
       </ul>
+
+      <h3>Workflow</h3>
+      <p>User Input &rarr; AI Planning &rarr; Web Search &rarr; Product Comparison &rarr; Final Recommendation</p>
 
       <h3>Tech Stack</h3>
       <div class="tech-stack">
-        <span>Python</span><span>LangChain</span><span>LangGraph</span><span>Tavily API</span><span>LLM</span><span>APIs</span>
+        <span>Python</span><span>LangChain</span><span>LangGraph</span><span>Tavily API</span><span>LLM</span>
       </div>
     </div>
   </div>
 
-  <!-- RAG MODAL -->
-  <div id="ragModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>AI Website Chatbot (RAG System)</h2>
-      <p>Developed an advanced Retrieval-Augmented Generation (RAG) chatbot that retrieves and answers user queries using real-time knowledge from GeeksforGeeks documentation.</p>
-
-      <h3>Key Features</h3>
-      <ul>
-        <li><strong>Data Processing:</strong> Scraped and processed GeeksforGeeks documentation for comprehensive Python concepts.</li>
-        <li><strong>Semantic Search:</strong> Implemented advanced embeddings for high-relevance retrieval during user queries.</li>
-        <li><strong>Vector Database:</strong> Leveraged <strong>FAISS</strong> for efficient document indexing and high-speed lookups.</li>
-        <li><strong>Optimized Chunking:</strong> Designed a custom chunking strategy to preserve semantic context across documents.</li>
-        <li><strong>End-to-End Pipeline:</strong> Built a complete retrieval-generation workflow for accurate, context-aware answers.</li>
-        <li><strong>LLM Generation:</strong> Integrated <strong>OpenRouter (LLM)</strong> to synthesize retrieved data into natural responses.</li>
-      </ul>
-
-      <h3>Tech Stack</h3>
-      <div class="tech-stack">
-        <span>Python</span><span>LangChain</span><span>FAISS</span><span>Embeddings</span><span>Web Scraping</span><span>OpenRouter (LLM)</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- YOUTUBE ANALYZER MODAL -->
+  <!-- YOUTUBE VIDEO ANALYZER MODAL -->
   <div id="youtubeModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>YouTube Video Analyzer (AI + RAG System)</h2>
-      <p>An advanced AI system that analyzes YouTube videos using transcript-based retrieval and generates structured insights and learning outcomes.</p>
+      <h2>YouTube Video Analyzer</h2>
+      <p>Developed an AI application that extracts YouTube transcripts, generates summaries, identifies key topics, and answers user questions using Retrieval-Augmented Generation.</p>
 
-      <h3>Key Features</h3>
+      <h3>Features</h3>
       <ul>
-        <li><strong>Transcript Extraction:</strong> Automatic retrieval of video transcripts using specialized APIs.</li>
-        <li><strong>Smart Chunking:</strong> Innovative TF-IDF based retrieval logic for navigating long-form video content.</li>
-        <li><strong>Context-Aware Q&A:</strong> An intelligent RAG pipeline that answers specific user questions using video context.</li>
-        <li><strong>Structured Summarization:</strong> Generates automated summaries, topic lists, and key learning points.</li>
-        <li><strong>Real-time Chat:</strong> Interactive interface for deep-diving into video content through conversation.</li>
+        <li><strong>Transcript Extraction:</strong> Automatically fetches video subtitles and transcripts.</li>
+        <li><strong>Video Summarization:</strong> Condensed overviews highlighting main ideas from the video.</li>
+        <li><strong>Topic Detection:</strong> Identifies and tags distinct subjects covered in the video.</li>
+        <li><strong>AI Question Answering:</strong> Asks and receives answers grounded in the video transcript content.</li>
+        <li><strong>Learning Notes:</strong> Automatically creates organized, clean study notes from the video.</li>
+        <li><strong>Interactive Chat:</strong> Chat dynamically with the video content using RAG techniques.</li>
       </ul>
+
+      <h3>Workflow</h3>
+      <p>YouTube URL &rarr; Transcript &rarr; Chunking &rarr; Retrieval &rarr; AI Response</p>
 
       <h3>Tech Stack</h3>
       <div class="tech-stack">
-        <span>Python</span><span>FastAPI</span><span>TF-IDF (sklearn)</span><span>YouTube Transcript API</span><span>OpenRouter / Groq</span><span>RAG</span>
+        <span>Python</span><span>FastAPI</span><span>YouTube Transcript API</span><span>TF-IDF</span><span>RAG</span><span>Ollama</span>
       </div>
     </div>
   </div>
 
-  <!-- VOICE MODAL -->
-  <div id="voiceModal" class="modal">
+  <!-- AI WEBSITE CHATBOT (RAG) MODAL -->
+  <div id="ragModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>AI Voice Assistant (Kids Learning)</h2>
-      <p>A specialized voice assistant designed to help children (Class 1–5) learn basic educational concepts in a fun and interactive way.</p>
+      <h2>AI Website Chatbot (RAG)</h2>
+      <p>Built a Retrieval-Augmented Generation chatbot that answers Python programming questions by retrieving relevant information from technical documentation.</p>
 
-      <h3>Key Features</h3>
+      <h3>Features</h3>
       <ul>
-        <li><strong>Speech-to-Text:</strong> Integrated <strong>Whisper (STT)</strong> for highly accurate child voice recognition.</li>
-        <li><strong>Text-to-Speech:</strong> Leverages <strong>edge-tts</strong> for natural, human-like voice synthesis that is clear for kids.</li>
-        <li><strong>Real-time Interaction:</strong> Engineered for a seamless and responsive learning experience with low latency.</li>
-        <li><strong>Intelligent Q&A:</strong> Integrated <strong>OpenRouter (LLM)</strong> to answer kids' curious questions about ABCD, tables, and GK.</li>
-        <li><strong>System Flow:</strong> Voice Input &rarr; Whisper (STT) &rarr; OpenRouter (LLM) &rarr; edge-tts (TTS) &rarr; Voice Output</li>
+        <li><strong>Web Scraping:</strong> Extracts code samples and explanations from official Python pages and docs.</li>
+        <li><strong>Document Processing:</strong> Formats, splits, and structures scraped text into searchable chunks.</li>
+        <li><strong>Semantic Search:</strong> Retrieves content based on user query intent, not just keyword matching.</li>
+        <li><strong>FAISS Vector Database:</strong> Uses FAISS index for lightning-fast retrieval of relevant chunks.</li>
+        <li><strong>Embeddings:</strong> Generates semantic vector representations using HuggingFace models.</li>
+        <li><strong>Context-aware Responses:</strong> Synthesizes code examples and clear explanations using Ollama LLM.</li>
       </ul>
+
+      <h3>Workflow</h3>
+      <p>Web Data &rarr; Chunking &rarr; Embeddings &rarr; FAISS &rarr; User Query &rarr; AI Response</p>
 
       <h3>Tech Stack</h3>
       <div class="tech-stack">
-        <span>Python</span><span>Whisper (STT)</span><span>edge-tts</span><span>OpenRouter (LLM)</span><span>SpeechRecognition</span>
+        <span>Python</span><span>LangChain</span><span>FAISS</span><span>HuggingFace Embeddings</span><span>Web Scraping</span><span>Ollama</span>
       </div>
     </div>
   </div>
