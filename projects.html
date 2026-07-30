@@ -83,6 +83,7 @@
         <div class="project-btns">
           <button class="view-btn" onclick="openModal('careerPilotModal')">View Details</button>
           <button class="github-btn" onclick="window.open('https://github.com/anshul-94/CareerPilotAI-', '_blank')">View on GitHub →</button>
+          <button class="github-btn" onclick="window.open('https://careerpilotai-33yw.onrender.com/', '_blank')">🚀 Live Demo</button>
         </div>
       </div>
 
@@ -167,23 +168,28 @@
         </div>
       </div>
 
-      <!-- AI WEBSITE CHATBOT (RAG) -->
+      <!-- MEMORY-BASED AI CHATBOT -->
       <div class="project-card">
-        <h3>AI Website Chatbot (RAG)</h3>
+        <h3>Memory-Based AI Chatbot</h3>
         <p>
-          Built a Retrieval-Augmented Generation chatbot that answers Python programming questions by retrieving relevant information from technical documentation.
+          Built an AI-powered chatbot that remembers previous conversations, allows users to upload different file types, and answers questions using Retrieval-Augmented Generation (RAG). The chatbot supports multiple document formats and provides context-aware responses with persistent conversation memory.
         </p>
         <div class="tech-stack">
           <span>Python</span>
+          <span>Flask</span>
           <span>LangChain</span>
           <span>FAISS</span>
           <span>HuggingFace Embeddings</span>
-          <span>Web Scraping</span>
           <span>Ollama</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>RAG</span>
         </div>
         <div class="project-btns">
           <button class="view-btn" onclick="openModal('ragModal')">View Details</button>
           <button class="github-btn" onclick="window.open('https://github.com/anshul-94/DocuMindAI', '_blank')">View on GitHub →</button>
+          <button class="github-btn" onclick="window.open('https://mini-gpt-flgx.onrender.com/', '_blank')">🚀 Live Demo</button>
         </div>
       </div>
 
@@ -334,29 +340,32 @@
     </div>
   </div>
 
-  <!-- AI WEBSITE CHATBOT (RAG) MODAL -->
+  <!-- MEMORY-BASED AI CHATBOT MODAL -->
   <div id="ragModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>AI Website Chatbot (RAG)</h2>
-      <p>Built a Retrieval-Augmented Generation chatbot that answers Python programming questions by retrieving relevant information from technical documentation.</p>
+      <h2>Memory-Based AI Chatbot</h2>
+      <p>Built an AI-powered chatbot that remembers previous conversations, allows users to upload different file types, and answers questions using Retrieval-Augmented Generation (RAG). The chatbot supports multiple document formats and provides context-aware responses with persistent conversation memory.</p>
 
       <h3>Features</h3>
       <ul>
-        <li><strong>Web Scraping:</strong> Extracts code samples and explanations from official Python pages and docs.</li>
-        <li><strong>Document Processing:</strong> Formats, splits, and structures scraped text into searchable chunks.</li>
-        <li><strong>Semantic Search:</strong> Retrieves content based on user query intent, not just keyword matching.</li>
-        <li><strong>FAISS Vector Database:</strong> Uses FAISS index for lightning-fast retrieval of relevant chunks.</li>
-        <li><strong>Embeddings:</strong> Generates semantic vector representations using HuggingFace models.</li>
-        <li><strong>Context-aware Responses:</strong> Synthesizes code examples and clear explanations using Ollama LLM.</li>
+        <li><strong>Persistent Chat Memory:</strong> Remembers previous conversations to provide context-aware and personalized responses.</li>
+        <li><strong>PDF Question Answering:</strong> Upload PDF documents and ask questions directly from their content.</li>
+        <li><strong>CSV & Excel Analysis:</strong> Analyze spreadsheets, generate insights, and answer data-related questions.</li>
+        <li><strong>Image Understanding:</strong> Upload images and ask questions about objects, text, or visual content.</li>
+        <li><strong>WhatsApp Chat Analysis:</strong> Upload exported WhatsApp chats to generate summaries, insights, and conversation analysis.</li>
+        <li><strong>Retrieval-Augmented Generation (RAG):</strong> Retrieves relevant information before generating accurate responses.</li>
+        <li><strong>Semantic Search:</strong> Finds relevant information using embeddings instead of keyword matching.</li>
+        <li><strong>FAISS Vector Database:</strong> Stores and retrieves document embeddings efficiently for fast responses.</li>
+        <li><strong>Ollama LLM:</strong> Generates natural and intelligent responses using a locally hosted language model.</li>
       </ul>
 
       <h3>Workflow</h3>
-      <p>Web Data &rarr; Chunking &rarr; Embeddings &rarr; FAISS &rarr; User Query &rarr; AI Response</p>
+      <p>Upload File / User Message &rarr; Document Processing &rarr; Chunking &amp; Embeddings &rarr; FAISS Vector Search &rarr; Retrieve Relevant Context &rarr; Ollama LLM &rarr; Context-Aware AI Response</p>
 
       <h3>Tech Stack</h3>
       <div class="tech-stack">
-        <span>Python</span><span>LangChain</span><span>FAISS</span><span>HuggingFace Embeddings</span><span>Web Scraping</span><span>Ollama</span>
+        <span>Python</span><span>Flask</span><span>LangChain</span><span>FAISS</span><span>HuggingFace Embeddings</span><span>Ollama</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>RAG</span>
       </div>
     </div>
   </div>
