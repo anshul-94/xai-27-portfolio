@@ -1338,3 +1338,240 @@ display:none;
   }
 
 }
+
+/* Center the hero text and profile photo */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* Left-side text */
+.hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Circular profile photo */
+.hero-image {
+    width: 325px;
+    height: 325px;
+    flex: 0 0 325px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Image crop */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 50%;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 35px;
+        padding: 45px 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 250px;
+        flex-basis: 250px;
+    }
+}
+
+
+
+
+
+/* ===== MOBILE HERO: EXACT REFERENCE LAYOUT ===== */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 20px 5% 30px;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    .hero-container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 20px;
+
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    /* Heading and text */
+    .hero-text {
+        width: 100%;
+        min-width: 0;
+        flex: none;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(28px, 6.5vw, 38px);
+        line-height: 1.2;
+        margin: 0 0 16px;
+    }
+
+    .hero-text h1 span {
+        display: inline;
+    }
+
+    .hero-text h3 {
+        font-size: clamp(16px, 4vw, 21px);
+        line-height: 1.4;
+        margin: 0 0 16px;
+    }
+
+    .hero-text p {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+        font-size: clamp(14px, 3.6vw, 17px);
+        line-height: 1.55;
+        overflow-wrap: break-word;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        width: 100%;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 22px;
+    }
+
+    .top-btn,
+    .bottom-btns {
+        display: contents;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        min-width: 0;
+        min-height: 48px;
+        padding: 10px 6px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+        text-align: center;
+        white-space: normal;
+        font-size: clamp(13px, 3.6vw, 17px);
+    }
+
+    /* View Projects full width */
+    .hero-buttons .top-btn a {
+        grid-column: 1 / -1;
+    }
+
+    /* Circular profile image */
+    .hero-image {
+        width: min(68vw, 280px);
+        height: min(68vw, 280px);
+        flex: 0 0 auto;
+        margin: 0 auto;
+
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+        box-sizing: border-box;
+    }
+
+    .hero-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+
+        object-fit: cover;
+        object-position: center 20%;
+        border-radius: 50%;
+    }
+}
+
+/* ===== SMALL PHONES ===== */
+
+@media screen and (max-width: 400px) {
+
+    .hero {
+        padding: 16px 5% 24px;
+    }
+
+    .hero-container {
+        gap: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 27px;
+        margin-bottom: 12px;
+    }
+
+    .hero-text h3 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .hero-text p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .hero-buttons {
+        gap: 9px;
+        margin-top: 16px;
+    }
+
+    .hero-buttons .btn {
+        min-height: 44px;
+        padding: 8px 5px;
+        font-size: 13px;
+    }
+
+    .hero-image {
+        width: 190px;
+        height: 190px;
+    }
+}
+
+
